@@ -183,7 +183,7 @@ spec:
         echo "** Step publish-products **"
         echo "***************************"
         
-         echo "Hey pipeline6"
+         echo "Hey pipeline1"
         echo pwd is  $(pwd)
         ls
         tar -xzvf scripts/toolkit-linux.tgz
@@ -191,6 +191,8 @@ spec:
         ls scripts/
         printf "Y\nY" | ./apic licenses
         printf "Y\nY" | ./apic login --server apic-clust-1824c088-api-manager-tools.itzroks-6650023xhj-rwqa4f-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-gb.containers.appdomain.cloud --realm provider/default-idp-2 --username ashwincat --password ashwin123
+        ./apic products:get --server apic-clust-1824c088-api-manager-tools.itzroks-6650023xhj-rwqa4f-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-gb.containers.appdomain.cloud --org nlpm --catalog sandbox --scope catalog demoproduct:1.0.0
+        ./apic catalogs:list --server apic-clust-1824c088-api-manager-tools.itzroks-6650023xhj-rwqa4f-4b4a324f027aea19c5cbc0c3275c4656-0000.eu-gb.containers.appdomain.cloud --org nlpm
         
         ls source/apic-publish-pipeline/config
         echo "done"
