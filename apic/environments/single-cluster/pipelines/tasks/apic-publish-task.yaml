@@ -182,6 +182,11 @@ spec:
         echo "***************************"
         echo "** Step publish-products **"
         echo "***************************"
+        
+         echo "Hey pipeline4"
+        echo pwd is  $(pwd)
+        ls
+        
         # Pre-req for parsing YAML files and create HTTP requests
         export PYTHONWARNINGS="ignore:Unverified HTTPS request"
         python3 -mpip install PyYAML requests > /dev/null
